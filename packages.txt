@@ -25,6 +25,8 @@ power-profiles-daemon
 
 # - networking -
 networkmanager
+bluez
+bluez-utils
 
 # - graphics -
 mesa
@@ -42,7 +44,6 @@ nvidia-open
 libva-nvidia-driver
 
 # - desktop -
-polkit
 cosmic
 
 # - audio -
@@ -54,6 +55,11 @@ pipewire-audio
 pipewire-alsa
 pipewire-pulse
 pipewire-jack
+
+# - services -
+libnotify
+polkit
+fwupd
 
 # - other -
 podman
