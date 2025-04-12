@@ -1,43 +1,53 @@
-# arch linux
+# - arch linux -
 base
 
-# linux
+# - linux -
 linux
 linux-firmware
 
-# microcode
+# - microcode -
 amd-ucode
 intel-ucode
 
-# boot
+# - boot -
 grub
 dracut
 ostree
+# bootc (pkgbuild)
+# bootupd (pkgbuild)
 
-# admin
+# - admin -
 sudo
 vim
 
-# power
+# - power -
 power-profiles-daemon
 
-# networking
+# - networking -
 networkmanager
 
-# graphics
+# - graphics -
 mesa
-nvidia-open
+
+# amd
 libva-mesa-driver
+
+# intel
 libva-intel-driver
 intel-media-driver
 vulkan-intel
+
+# nvidia
+nvidia-open
 libva-nvidia-driver
 
-# desktop
+# - desktop -
 polkit
 cosmic
 
-# audio
+# - audio -
+sof-firmware
+
 pipewire
 wireplumber
 pipewire-audio
@@ -45,11 +55,7 @@ pipewire-alsa
 pipewire-pulse
 pipewire-jack
 
-# other
+# - other -
 podman
 flatpak
 distrobox
-
-# pkgbuilds
-# - bootc
-# - bootupd
