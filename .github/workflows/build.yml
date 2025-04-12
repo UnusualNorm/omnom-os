@@ -47,11 +47,7 @@ jobs:
 
       - name: Log in
         if: github.event_name != 'pull_request'
-        uses: redhat-actions/podman-login@v1
-        with:
-          username: ${{ env.REGISTRY_USER }}
-          password: ${{ env.REGISTRY_PASSWORD }}
-          registry: ${{ steps.registry_case.outputs.lowercase }}
+        run: sudo podman login --username "${{ env.REGISTRY_USER }}" --password "${{ env.REGISTRY_PASSWORD }}" "${{ steps.registry_case.outputs.lowercase }}"
 
       - name: Lowercase tag
         if: github.event_name != 'pull_request'
@@ -62,8 +58,8 @@ jobs:
 
       - name: Tag image
         if: github.event_name != 'pull_request'
-        run: podman tag ${{ steps.name_case.outputs.lowercase }} ${{ steps.tag_case.outputs.lowercase }}
+        run: sudo podman tag ${{ steps.name_case.outputs.lowercase }} ${{ steps.tag_case.outputs.lowercase }}
 
       - name: Push image 
         if: github.event_name != 'pull_request'
-        run: podman push ${{ steps.tag_case.outputs.lowercase }}
+        run: sudo podman push ${{ steps.tag_case.outputs.lowercase }}
