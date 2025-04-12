@@ -1,0 +1,55 @@
+# arch linux
+base
+
+# linux
+linux
+linux-firmware
+
+# microcode
+amd-ucode
+intel-ucode
+
+# boot
+grub
+dracut
+ostree
+
+# admin
+sudo
+vim
+
+# power
+power-profiles-daemon
+
+# networking
+networkmanager
+
+# graphics
+mesa
+nvidia-open
+libva-mesa-driver
+libva-intel-driver
+intel-media-driver
+vulkan-intel
+libva-nvidia-driver
+
+# desktop
+polkit
+cosmic
+
+# audio
+pipewire
+wireplumber
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
+pipewire-jack
+
+# other
+podman
+flatpak
+distrobox
+
+# pkgbuilds
+# - bootc
+# - bootupd
