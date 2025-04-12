@@ -38,13 +38,20 @@ jobs:
       - name: Build image
         run: sudo podman build . -t ${{ steps.name_case.outputs.lowercase }} --cap-add sys_admin
 
+      - name: Lowercase registry
+        if: github.event_name != 'pull_request'
+        id: registry_case
+        uses: ASzc/change-string-case-action@v6
+        with:
+          string: ${{ env.IMAGE_REGISTRY }}
+
       - name: Log in
         if: github.event_name != 'pull_request'
         uses: redhat-actions/podman-login@v1
         with:
           username: ${{ env.REGISTRY_USER }}
           password: ${{ env.REGISTRY_PASSWORD }}
-          registry: ${{ env.IMAGE_REGISTRY }}
+          registry: ${{ steps.registry_case.outputs.lowercase }}
 
       - name: Lowercase tag
         if: github.event_name != 'pull_request'
