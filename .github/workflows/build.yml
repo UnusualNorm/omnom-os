@@ -11,7 +11,7 @@ env:
   REGISTRY_PASSWORD: ${{ github.token }}
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   IMAGE_NAME: ${{ github.repository }}
-  IMAGE_TAG: ${{ env.IMAGE_REGISTRY }}/${{ env.IMAGE_NAME }}
+  IMAGE_TAG: ghcr.io/${{ github.repository_owner }}/${{ github.repository }}
 
 jobs:
   build:
