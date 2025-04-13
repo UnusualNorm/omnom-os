@@ -19,6 +19,7 @@ ostree
 # - admin -
 sudo
 vim
+unzip
 
 # - power -
 power-profiles-daemon
@@ -62,6 +63,7 @@ polkit
 fwupd
 
 # - other -
+git
 podman
 flatpak
 distrobox
