@@ -73,6 +73,7 @@ nvidia-container-toolkit
 qemu-full
 
 # - applications -
+fuse2
 flatpak
 distrobox
 
