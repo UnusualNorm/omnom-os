@@ -7,22 +7,22 @@ RUN pacman -Sy && \
 USER builder
 
 COPY makepkgs.sh /makepkgs.sh
-COPY --chown=builder:builder pkgbuilds /pkgbuilds
-RUN /makepkgs.sh -s --noconfirm
+COPY --chown=builder:builder PKGBUILDS /PKGBUILDS
+RUN /makepkgs.sh -cs --noconfirm
 
 
 FROM docker.io/archlinux:base-devel AS builder
 RUN pacman -Sy --noconfirm arch-install-scripts
-COPY packages.txt /tmp/packages.txt
-RUN pacstrap -P /mnt $(grep -v '^#' /tmp/packages.txt | tr '\n' ' ')
+COPY pkglist.txt /tmp/pkglist.txt
+RUN pacstrap -P /mnt $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ')
 
 
 FROM scratch
 COPY --from=builder /mnt /
 
-COPY --from=pkg-builder /pkgbuilds /tmp/pkgbuilds
-RUN pacman -U --noconfirm /tmp/pkgbuilds/*.pkg.tar.zst && \
-    rm -rf /tmp/pkgbuilds
+COPY --from=pkg-builder /PKGBUILDS /tmp/PKGBUILDS
+RUN pacman -U --noconfirm /tmp/PKGBUILDS/*.pkg.tar.zst && \
+    rm -rf /tmp/PKGBUILDS
 
 COPY files /
 COPY scripts /scripts
@@ -30,8 +30,8 @@ COPY scripts /scripts
 COPY run-scripts.sh /tmp/run-scripts.sh
 RUN /tmp/run-scripts.sh && \
     rm /tmp/run-scripts.sh && \
-
     rm -rf /scripts
+
 RUN sed -i \
     -e 's|^#\(DBPath\s*=\s*\).*|\1/usr/lib/pacman|g' \
     -e 's|^#\(IgnoreGroup\s*=\s*\).*|\1modified|g' \

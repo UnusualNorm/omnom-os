@@ -67,3 +67,4 @@ git
 podman
 flatpak
 distrobox
+# steam-devices-git (pkgbuild)

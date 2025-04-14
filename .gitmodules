@@ -1,0 +1,3 @@
+[submodule "PKGBUILDS/steam-devices-git"]
+	path = PKGBUILDS/steam-devices-git
+	url = https://aur.archlinux.org/steam-devices-git.git

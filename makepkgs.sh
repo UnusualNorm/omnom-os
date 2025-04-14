@@ -1,9 +1,7 @@
 set -e
-for dir in pkgbuilds/*; do
+for dir in PKGBUILDS/*; do
   cd "$dir"
   makepkg $@
-  for pkg in *.pkg.tar.zst; do
-    cp "$pkg" ../
-  done
+  cp *.pkg.tar.zst ../
   cd ../../
 done
