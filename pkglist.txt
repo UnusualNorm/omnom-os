@@ -65,6 +65,7 @@ fwupd
 # - other -
 git
 podman
+nvidia-container-toolkit
 flatpak
 distrobox
 # steam-devices-git (pkgbuild)
