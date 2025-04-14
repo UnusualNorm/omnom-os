@@ -71,6 +71,7 @@ nvidia-container-toolkit
 
 # - virtualization -
 qemu-desktop
+libvirt
 
 # - applications -
 fuse2
