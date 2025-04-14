@@ -29,6 +29,8 @@ jobs:
           
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: 'true'
 
       - name: Lowercase name
         id: name_case
