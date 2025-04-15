@@ -81,6 +81,7 @@ dnsmasq
 fuse2
 flatpak
 distrobox
+gnome-keyring
 
 # - gaming -
 # steam-devices-git (pkgbuild)
