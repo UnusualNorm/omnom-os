@@ -64,10 +64,13 @@ fwupd
 
 # - utils -
 git
+less
+gnu-netcat
 
 # - containers -
 podman
 nvidia-container-toolkit
+# devpod (pkgbuild)
 
 # - virtualization -
 qemu-desktop
