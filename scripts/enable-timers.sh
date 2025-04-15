@@ -1,2 +1,2 @@
 set -e
-systemctl enable bootc-fetch-apply-updates.timer
+systemctl enable bootc-fetch-updates.timer
