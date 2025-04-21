@@ -1,7 +1,7 @@
 pkgname=bootc
-pkgver=1.1.6
+pkgver=1.1.7
 pkgrel=1
-pkgdesc="Bootable container system"
+pkgdesc="Boot and upgrade via container images"
 arch=('x86_64' 'aarch64')
 url="https://github.com/containers/bootc"
 license=('Apache-2.0' 'MIT')
