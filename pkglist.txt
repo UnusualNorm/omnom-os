@@ -46,7 +46,6 @@ libva-nvidia-driver
 
 # - desktop -
 cosmic
-xdg-desktop-portal-gtk
 
 # - audio -
 sof-firmware
