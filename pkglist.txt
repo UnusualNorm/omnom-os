@@ -69,8 +69,12 @@ git
 less
 gnu-netcat
 
+# - android -
+waydroid
+
 # - containers -
 podman
+podman-compose
 nvidia-container-toolkit
 # devpod (pkgbuild)
 
