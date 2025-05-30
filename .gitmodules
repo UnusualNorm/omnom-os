@@ -4,6 +4,3 @@
 [submodule "PKGBUILDS/devpod-bin"]
 	path = PKGBUILDS/devpod-bin
 	url = https://aur.archlinux.org/devpod-bin.git
-[submodule "PKGBUILDS/podman-bootc"]
-	path = PKGBUILDS/podman-bootc
-	url = https://aur.archlinux.org/podman-bootc.git
