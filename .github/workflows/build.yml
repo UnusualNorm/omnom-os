@@ -59,6 +59,5 @@ jobs:
       - name: Tag and push image
         if: github.event_name != 'pull_request'
         run: |
-          # Tag the image with the name of the branch
           podman tag ${{ steps.name_case.outputs.lowercase }} ${{ steps.tag_case.outputs.lowercase }}
           podman push ${{ steps.tag_case.outputs.lowercase }}

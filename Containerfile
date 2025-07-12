@@ -25,17 +25,17 @@ COPY pkglist.aur.txt /tmp/pkglist.aur.txt
 COPY --from=builder /home/custompkgs /usr/lib/pacman/custompkgs
 
 RUN echo -e "\n[custom]\nSigLevel = Optional TrustAll\nServer = file:///usr/lib/pacman/custompkgs" >> /etc/pacman.conf && \
-    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
-    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.aur.txt | tr '\n' ' ')
+    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') $(grep -v '^#' /tmp/pkglist.aur.txt | tr '\n' ' ') && \
+    rm /tmp/pkglist.txt /tmp/pkglist.aur.txt
 
 COPY files /
 COPY scripts /scripts
 
 COPY run-scripts.sh /tmp/run-scripts.sh
 RUN /tmp/run-scripts.sh && \
+    pacman -Scc --noconfirm && \
     rm /tmp/run-scripts.sh && \
     rm -r /scripts && \
-    pacman -Scc --noconfirm && \
     rm -r /boot/* /var/cache/* /var/db/* /var/lib/* /var/log/* /var/roothome/.cache && \
     find "/etc" -type s -exec rm {} \; && \
     bootc container lint
