@@ -9,5 +9,5 @@ sudo systemd-sysusers # Regenerates system users
 ```
 Then rebooting.
 
-## `Failed to start Remount Root and Kernel File System`
+## `Failed to start Remount Root and Kernel File Systems`
 ### I have no idea. System still seems to work fine. TODO
