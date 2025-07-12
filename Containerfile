@@ -1,28 +1,32 @@
-FROM docker.io/archlinux:base-devel AS pkg-builder
-WORKDIR /
+FROM ghcr.io/archlinux/archlinux:base-devel AS builder
 
-RUN pacman -Sy && \
-    useradd -m builder && \
-    echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
+RUN useradd -m builder && \
+    echo 'builder ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers && \
+    echo -e "\n[custom]\nSigLevel = Optional TrustAll\nServer = file:///home/custompkgs" >> /etc/pacman.conf && \
+    install -d /home/custompkgs -o builder && \
+    repo-add /home/custompkgs/custom.db.tar.gz && \
+    chown -R builder /home/custompkgs && \
+    pacman -Sy --noconfirm git
+
 USER builder
+WORKDIR /home/builder
 
-COPY makepkgs.sh /makepkgs.sh
-COPY --chown=builder:builder PKGBUILDS /PKGBUILDS
-RUN /makepkgs.sh -cs --noconfirm
+RUN git clone https://aur.archlinux.org/aurutils.git && \
+    cd aurutils && \
+    makepkg -si --noconfirm
+
+COPY pkglist.aur.txt /tmp/pkglist.aur.txt
+RUN AUR_PAGER=ls aur sync --noconfirm $(grep -v '^#' /tmp/pkglist.aur.txt | tr '\n' ' ')
 
 
-FROM docker.io/archlinux:base-devel AS builder
-RUN pacman -Sy --noconfirm arch-install-scripts
+FROM ghcr.io/unusualnorm/archlinux-bootc
 COPY pkglist.txt /tmp/pkglist.txt
-RUN pacstrap -P /mnt $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ')
+COPY pkglist.aur.txt /tmp/pkglist.aur.txt
+COPY --from=builder /home/custompkgs /usr/lib/pacman/custompkgs
 
-
-FROM scratch
-COPY --from=builder /mnt /
-
-COPY --from=pkg-builder /PKGBUILDS /tmp/PKGBUILDS
-RUN pacman -U --noconfirm /tmp/PKGBUILDS/*.pkg.tar.zst && \
-    rm -rf /tmp/PKGBUILDS
+RUN echo -e "\n[custom]\nSigLevel = Optional TrustAll\nServer = file:///usr/lib/pacman/custompkgs" >> /etc/pacman.conf && \
+    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
+    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.aur.txt | tr '\n' ' ')
 
 COPY files /
 COPY scripts /scripts
@@ -30,23 +34,8 @@ COPY scripts /scripts
 COPY run-scripts.sh /tmp/run-scripts.sh
 RUN /tmp/run-scripts.sh && \
     rm /tmp/run-scripts.sh && \
-    rm -rf /scripts
-
-RUN sed -i \
-    -e 's|^#\(DBPath\s*=\s*\).*|\1/usr/lib/pacman|g' \
-    -e 's|^#\(IgnoreGroup\s*=\s*\).*|\1modified|g' \
-    "/etc/pacman.conf" && \
-    mv "/var/lib/pacman" "/usr/lib/" && \
-    rm -rf /var/cache/* && \
-    find "/etc" -type s -exec rm {} \;
-
-RUN mkdir /sysroot /efi && \
-    rm -rf /boot/* /var/log /home /root /usr/local /srv && \
-    ln -s sysroot/ostree /ostree && \
-    ln -s var/home /home && \
-    ln -s var/roothome /root && \
-    ln -s var/usrlocal /usr/local && \
-    ln -s var/srv /srv
-
-RUN bootc container lint
-LABEL containers.bootc=1
+    rm -r /scripts && \
+    pacman -Scc --noconfirm && \
+    rm -r /boot/* /var/cache/* /var/db/* /var/lib/* /var/log/* /var/roothome/.cache && \
+    find "/etc" -type s -exec rm {} \; && \
+    bootc container lint

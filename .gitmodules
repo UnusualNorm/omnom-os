@@ -1,6 +1,0 @@
-[submodule "PKGBUILDS/steam-devices-git"]
-	path = PKGBUILDS/steam-devices-git
-	url = https://aur.archlinux.org/steam-devices-git.git
-[submodule "PKGBUILDS/devpod-bin"]
-	path = PKGBUILDS/devpod-bin
-	url = https://aur.archlinux.org/devpod-bin.git

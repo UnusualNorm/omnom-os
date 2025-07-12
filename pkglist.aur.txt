@@ -1,0 +1,4 @@
+devpod-bin
+podman-bootc
+steam-devices-git
+waydroid
