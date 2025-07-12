@@ -1,20 +1,6 @@
-# - arch linux -
-base
-
-# - linux -
-linux
-linux-firmware
-
 # - microcode -
 amd-ucode
 intel-ucode
-
-# - boot -
-grub
-dracut
-ostree
-# bootc (pkgbuild)
-# bootupd (pkgbuild)
 
 # - admin -
 sudo
@@ -70,7 +56,7 @@ less
 gnu-netcat
 
 # - android -
-# waydroid
+# waydroid (aur)
 
 # - containers -
 podman
@@ -79,6 +65,7 @@ nvidia-container-toolkit
 # devpod (pkgbuild)
 
 # - virtualization -
+# podman-bootc (aur)
 qemu-desktop
 libvirt
 dnsmasq
