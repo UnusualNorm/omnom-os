@@ -62,7 +62,6 @@ gnu-netcat
 podman
 podman-compose
 nvidia-container-toolkit
-# devpod (pkgbuild)
 
 # - virtualization -
 # podman-bootc (aur)
@@ -77,4 +76,15 @@ distrobox
 gnome-keyring
 
 # - gaming -
-# steam-devices-git (pkgbuild)
+# steam-devices-git (aur)
+
+# - development -
+deno
+# devpod-bin (aur)
+dotnet-sdk
+gcc
+jdk-openjdk
+nodejs
+python
+rust
+
