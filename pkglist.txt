@@ -86,5 +86,5 @@ gcc
 jdk-openjdk
 nodejs
 python
-rust
+rustup
 
