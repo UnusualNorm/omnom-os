@@ -54,9 +54,10 @@ fwupd
 git
 less
 gnu-netcat
+android-tools
 
 # - android -
-# waydroid (aur)
+waydroid
 
 # - containers -
 podman
@@ -64,23 +65,26 @@ podman-compose
 nvidia-container-toolkit
 
 # - virtualization -
-# podman-bootc (aur)
+podman-bootc
 qemu-desktop
 libvirt
 dnsmasq
 
 # - applications -
+firefox
+vesktop
 fuse2
 flatpak
 distrobox
 gnome-keyring
 
 # - gaming -
-# steam-devices-git (aur)
+proton-ge-custom-bin
+steam
 
 # - development -
 deno
-# devpod-bin (aur)
+devpod-bin
 dotnet-sdk
 gcc
 jdk-openjdk
@@ -88,6 +92,7 @@ nodejs
 python
 rust
 rust-src
+rust-wasm
 
 # - development libraries -
 # bevy

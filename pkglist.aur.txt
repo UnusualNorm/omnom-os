@@ -1,4 +1,5 @@
 devpod-bin
 podman-bootc
-steam-devices-git
+proton-ge-custom-bin
+vesktop
 waydroid
