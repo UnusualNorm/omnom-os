@@ -81,6 +81,7 @@ gnome-keyring
 # - gaming -
 proton-ge-custom-bin
 steam
+sunshine
 
 # - development -
 deno
