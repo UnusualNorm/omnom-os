@@ -11,6 +11,7 @@ unzip
 power-profiles-daemon
 
 # - networking -
+chrony
 networkmanager
 bluez
 bluez-utils
