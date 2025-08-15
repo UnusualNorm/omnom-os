@@ -55,7 +55,6 @@ fwupd
 git
 less
 gnu-netcat
-android-tools
 
 # - android -
 waydroid
@@ -85,6 +84,10 @@ steam
 sunshine
 
 # - development -
+android-platform
+androis-sdk-build-tools
+android-sdk-cmdline-tools-latest
+android-sdk-platform-tools
 deno
 devpod-bin
 dotnet-sdk
