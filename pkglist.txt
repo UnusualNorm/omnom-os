@@ -85,7 +85,7 @@ sunshine
 
 # - development -
 android-platform
-androis-sdk-build-tools
+android-sdk-build-tools
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
 deno
