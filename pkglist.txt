@@ -98,6 +98,7 @@ python
 rust
 rust-src
 rust-wasm
+zed
 
 # - development libraries -
 # bevy
