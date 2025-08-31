@@ -88,10 +88,13 @@ android-platform
 android-sdk-build-tools
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
+aspnet-runtime
+aspnet-targeting-pack
 deno
 devpod-bin
 dotnet-sdk
 gcc
+godot
 jdk-openjdk
 nodejs
 python
