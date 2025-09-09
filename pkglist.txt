@@ -56,9 +56,6 @@ git
 less
 gnu-netcat
 
-# - android -
-waydroid
-
 # - containers -
 podman
 podman-compose
@@ -72,7 +69,8 @@ dnsmasq
 
 # - applications -
 firefox
-vesktop
+imhex-bin
+vesktop-bin
 fuse2
 flatpak
 distrobox

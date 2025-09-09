@@ -3,7 +3,7 @@ android-sdk-build-tools
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
 devpod-bin
+imhex-bin
 podman-bootc
 proton-ge-custom-bin
-vesktop
-waydroid
+vesktop-bin
