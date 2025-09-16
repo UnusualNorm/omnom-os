@@ -54,7 +54,7 @@ fwupd
 # - utils -
 git
 less
-gnu-netcat
+openbsd-netcat
 
 # - containers -
 podman
