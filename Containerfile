@@ -24,6 +24,7 @@ FROM ghcr.io/unusualnorm/archlinux-bootc
 COPY pkglist.txt /tmp/pkglist.txt
 COPY pkglist.aur.txt /tmp/pkglist.aur.txt
 COPY --from=builder /aurpkgs /usr/lib/pacman/aurpkgs
+COPY files /
 
 RUN echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf && \
     echo -e "\n[lizardbyte]\nSigLevel = Optional\nServer = https://github.com/LizardByte/pacman-repo/releases/latest/download" >> /etc/pacman.conf && \
@@ -31,9 +32,7 @@ RUN echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.co
     pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
     rm /tmp/pkglist.txt /tmp/pkglist.aur.txt
 
-COPY files /
 COPY scripts /scripts
-
 COPY run-scripts.sh /tmp/run-scripts.sh
 RUN /tmp/run-scripts.sh && \
     pacman -Scc --noconfirm && \
