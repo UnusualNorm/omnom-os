@@ -6,6 +6,7 @@ intel-ucode
 sudo
 vim
 unzip
+btrfs-progs
 
 # - power -
 power-profiles-daemon
