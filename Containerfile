@@ -29,7 +29,7 @@ COPY files /
 RUN echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf && \
     echo -e "\n[lizardbyte]\nSigLevel = Optional\nServer = https://github.com/LizardByte/pacman-repo/releases/latest/download" >> /etc/pacman.conf && \
     echo -e "\n[aur]\nSigLevel = Optional TrustAll\nServer = file:///usr/lib/pacman/aurpkgs" >> /etc/pacman.conf && \
-    pacman -Sy --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
+    pacman -Syu --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
     rm /tmp/pkglist.txt /tmp/pkglist.aur.txt
 
 COPY scripts /scripts
