@@ -63,7 +63,6 @@ podman-compose
 nvidia-container-toolkit
 
 # - virtualization -
-podman-bootc
 qemu-desktop
 libvirt
 dnsmasq
@@ -83,10 +82,7 @@ steam
 sunshine
 
 # - development -
-android-platform
-android-sdk-build-tools
-android-sdk-cmdline-tools-latest
-android-sdk-platform-tools
+android-tools
 aspnet-runtime
 aspnet-targeting-pack
 deno

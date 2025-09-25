@@ -36,7 +36,7 @@ jobs:
           string: ${{ env.IMAGE_NAME }}
 
       - name: Build image
-        run: podman build . --layers=false -t ${{ steps.name_case.outputs.lowercase }}
+        run: podman build . --layers=false --no-cache -t ${{ steps.name_case.outputs.lowercase }}
 
       - name: Lowercase registry
         if: github.event_name != 'pull_request'
