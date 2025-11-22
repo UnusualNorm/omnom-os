@@ -70,7 +70,7 @@ dnsmasq
 # - applications -
 firefox
 imhex-bin
-vesktop-bin
+vesktop
 fuse2
 flatpak
 distrobox
@@ -86,7 +86,6 @@ android-tools
 aspnet-runtime
 aspnet-targeting-pack
 deno
-devpod-bin
 dotnet-sdk
 gcc
 godot
