@@ -1,4 +1,3 @@
-devpod-bin
 imhex-bin
 proton-ge-custom-bin
-vesktop-bin
+vesktop

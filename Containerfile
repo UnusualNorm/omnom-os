@@ -7,7 +7,7 @@ RUN useradd -m builder && \
     install -d /aurpkgs -o builder && \
     repo-add /aurpkgs/aur.db.tar.gz && \
     chown -R builder /aurpkgs && \
-    pacman -Sy --noconfirm git
+    pacman -Syu --noconfirm git
 
 USER builder
 WORKDIR /home/builder
