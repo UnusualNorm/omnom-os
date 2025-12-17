@@ -1,3 +1,5 @@
+base-devel
+
 # - microcode -
 amd-ucode
 intel-ucode
@@ -17,6 +19,10 @@ networkmanager
 bluez
 bluez-utils
 zerotier-one
+
+# - printing -
+cups
+canon-pixma-g6000-complete
 
 # - graphics -
 mesa
@@ -70,6 +76,7 @@ dnsmasq
 # - applications -
 firefox
 imhex-bin
+spotify
 vesktop
 fuse2
 flatpak
@@ -90,6 +97,7 @@ dotnet-sdk
 gcc
 godot
 jdk-openjdk
+mingw-w64-rust-bin
 nodejs
 python
 rust
@@ -100,4 +108,3 @@ zed
 # - development libraries -
 # bevy
 libx11 pkgconf alsa-lib libxcursor libxrandr libxi
-

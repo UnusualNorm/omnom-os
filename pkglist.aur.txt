@@ -1,3 +1,6 @@
+canon-pixma-g6000-complete
 imhex-bin
+mingw-w64-rust-bin
 proton-ge-custom-bin
+spotify
 vesktop

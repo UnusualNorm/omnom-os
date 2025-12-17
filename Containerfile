@@ -7,7 +7,7 @@ RUN useradd -m builder && \
     install -d /aurpkgs -o builder && \
     repo-add /aurpkgs/aur.db.tar.gz && \
     chown -R builder /aurpkgs && \
-    pacman -Syu --noconfirm git
+    pacman -Syu --noconfirm multilib-devel git
 
 USER builder
 WORKDIR /home/builder
@@ -17,7 +17,9 @@ RUN git clone https://aur.archlinux.org/aurutils.git && \
     makepkg -si --noconfirm
 
 COPY pkglist.aur.txt /tmp/pkglist.aur.txt
-RUN AUR_PAGER=ls aur sync --noconfirm $(cat /tmp/pkglist.aur.txt | tr '\n' ' ')
+RUN gpg --recv-keys F54984BFA16C640F 85AB96E6FA1BE5FE && \
+    curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.gpg | gpg --import - && \
+    AUR_PAGER=ls aur sync --noconfirm $(cat /tmp/pkglist.aur.txt | tr '\n' ' ')
 
 
 FROM ghcr.io/unusualnorm/archlinux-bootc
@@ -29,7 +31,7 @@ COPY files /
 RUN echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf && \
     echo -e "\n[lizardbyte]\nSigLevel = Optional\nServer = https://github.com/LizardByte/pacman-repo/releases/latest/download" >> /etc/pacman.conf && \
     echo -e "\n[aur]\nSigLevel = Optional TrustAll\nServer = file:///usr/lib/pacman/aurpkgs" >> /etc/pacman.conf && \
-    pacman -Syu --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
+    pacman --disable-sandbox -Syu --noconfirm $(grep -v '^#' /tmp/pkglist.txt | tr '\n' ' ') && \
     rm /tmp/pkglist.txt /tmp/pkglist.aur.txt
 
 COPY scripts /scripts
