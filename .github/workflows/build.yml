@@ -27,7 +27,13 @@ jobs:
       - name: Move storage
         run: |
           sudo mkdir -p /mnt/containers/storage
-          sudo sed -i 's|^graphroot = .*|graphroot = "/mnt/containers/storage"|' /etc/containers/storage.conf
+          sudo tee /etc/containers/storage.conf > /dev/null <<'EOF'
+          [storage]
+          driver = "overlay"
+          graphroot = "/mnt/containers/storage"
+          runroot = "/run/containers/storage"
+          EOF
+          sudo podman info --format 'GraphRoot={{.Store.GraphRoot}}'
 
       - name: Checkout repository
         uses: actions/checkout@v4
