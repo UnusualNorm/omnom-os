@@ -23,6 +23,11 @@ jobs:
     steps:
       - name: Remove software
         uses: ublue-os/remove-unwanted-software@v9
+        
+      - name: Move storage
+        run: |
+          sudo mkdir -p /mnt/containers/storage
+          sudo sed -i 's|^graphroot = .*|graphroot = "/mnt/containers/storage"|' /etc/containers/storage.conf
 
       - name: Checkout repository
         uses: actions/checkout@v4
