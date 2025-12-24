@@ -47,7 +47,7 @@ jobs:
           string: ${{ env.IMAGE_NAME }}
 
       - name: Build image
-        run: podman build . --layers=false --no-cache -t ${{ steps.name_case.outputs.lowercase }}
+        run: sudo podman build . --layers=false --no-cache -t ${{ steps.name_case.outputs.lowercase }}
 
       - name: Lowercase registry
         if: github.event_name != 'pull_request'
@@ -58,7 +58,7 @@ jobs:
 
       - name: Log in
         if: github.event_name != 'pull_request'
-        run: podman login --username "${{ env.REGISTRY_USER }}" --password "${{ env.REGISTRY_PASSWORD }}" "${{ steps.registry_case.outputs.lowercase }}"
+        run: sudo podman login --username "${{ env.REGISTRY_USER }}" --password "${{ env.REGISTRY_PASSWORD }}" "${{ steps.registry_case.outputs.lowercase }}"
 
       - name: Lowercase tag
         if: github.event_name != 'pull_request'
@@ -70,5 +70,5 @@ jobs:
       - name: Tag and push image
         if: github.event_name != 'pull_request'
         run: |
-          podman tag ${{ steps.name_case.outputs.lowercase }} ${{ steps.tag_case.outputs.lowercase }}
-          podman push ${{ steps.tag_case.outputs.lowercase }}
+          sudo podman tag ${{ steps.name_case.outputs.lowercase }} ${{ steps.tag_case.outputs.lowercase }}
+          sudo podman push ${{ steps.tag_case.outputs.lowercase }}
