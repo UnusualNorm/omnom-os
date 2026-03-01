@@ -4,6 +4,7 @@ openbsd-netcat
 slurp
 sudo
 unzip
+usb_modeswitch
 wl-clipboard
 vim
 yt-dlp
