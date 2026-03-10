@@ -17,3 +17,5 @@ flatpak
 proton-ge-custom-bin
 steam
 prismlauncher
+pavucontrol
+wayvr

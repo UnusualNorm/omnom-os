@@ -1,5 +1,8 @@
+bash-completion
+fastfetch
 git
 less
+ncdu
 openbsd-netcat
 slurp
 sudo
