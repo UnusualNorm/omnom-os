@@ -3,6 +3,8 @@ fastfetch
 git
 less
 ncdu
+ntfs-3g
+ntfsprogs
 openbsd-netcat
 slurp
 sudo
