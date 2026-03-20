@@ -11,7 +11,10 @@ polkit
 swaybg
 swayidle
 swaylock
+waybar
 wmenu
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xorg-xwayland
+
+otf-font-awesome

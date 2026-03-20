@@ -4,4 +4,3 @@ mingw-w64-rust-bin
 proton-ge-custom-bin
 spotify
 vesktop
-wayvr

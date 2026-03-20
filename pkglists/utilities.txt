@@ -1,5 +1,6 @@
 bash-completion
 fastfetch
+freerdp
 git
 less
 ncdu

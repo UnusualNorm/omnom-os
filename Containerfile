@@ -7,8 +7,7 @@ RUN useradd -m builder && \
     install -d /aurpkgs -o builder && \
     repo-add /aurpkgs/aur.db.tar.gz && \
     chown -R builder /aurpkgs && \
-    pacman -Syu --noconfirm multilib-devel git \
-        shaderc # fix for wayvr
+    pacman -Syu --noconfirm multilib-devel git
 
 USER builder
 WORKDIR /home/builder

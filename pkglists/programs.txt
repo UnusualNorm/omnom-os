@@ -16,6 +16,6 @@ fuse2
 flatpak
 proton-ge-custom-bin
 steam
+swayimg
 prismlauncher
 pavucontrol
-wayvr

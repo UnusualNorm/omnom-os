@@ -1,0 +1,2 @@
+bindsym Mod4+Shift+minus move scratchpad
+bindsym Mod4+minus scratchpad show
