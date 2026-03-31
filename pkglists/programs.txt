@@ -19,3 +19,5 @@ steam
 swayimg
 prismlauncher
 pavucontrol
+shelly-bin
+archlinux-appstream-data
