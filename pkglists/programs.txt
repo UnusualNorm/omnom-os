@@ -19,3 +19,4 @@ steam
 swayimg
 prismlauncher
 pavucontrol
+wayvr-bin

@@ -5,4 +5,5 @@ proton-ge-custom-bin
 spotify
 unityhub
 vesktop
+wayvr-bin
 yay
