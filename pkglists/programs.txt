@@ -11,7 +11,7 @@ mpv
 firefox
 imhex-bin
 spotify
-vesktop
+vesktop-bin
 fuse2
 flatpak
 proton-ge-custom-bin
