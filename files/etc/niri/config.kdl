@@ -129,22 +129,23 @@ hotkey-overlay {
     skip-at-startup
 }
 input {
+    focus-follows-mouse max-scroll-amount="0%"
     keyboard {
         xkb {
         }
         numlock
     }
+    mouse {
+    }
     touchpad {
         tap
         natural-scroll
-    }
-    mouse {
     }
     trackpoint {
     }
 }
 layout {
-    gaps 16
+    gaps 1
     center-focused-column "never"
     preset-column-widths {
         proportion 0.33333
@@ -153,7 +154,7 @@ layout {
     }
     default-column-width { proportion 0.5; }
     focus-ring {
-        width 4
+        width 1
         active-color "#7fc8ff"
         inactive-color "#505050"
     }
@@ -175,6 +176,9 @@ layout {
 }
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+window-rule {
+    clip-to-geometry true
+}
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
