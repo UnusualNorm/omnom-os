@@ -1,4 +1,4 @@
-truncate -s 10G image.raw
+truncate -s 20G image.raw
 sudo podman run \
     --rm \
     --privileged \

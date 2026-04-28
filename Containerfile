@@ -33,9 +33,9 @@ RUN echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.co
     rm -r /tmp/pkglists
 
 # RUN pacman --disable-sandbox -S whois --noconfirm && \
-#     useradd -m user && \
-#     usermod -aG wheel user && \
-#     usermod -p "$(echo "password" | mkpasswd -s)" user
+#     useradd -m username && \
+#     usermod -aG wheel username && \
+#     usermod -p "$(echo "password" | mkpasswd -s)" username
 
 COPY scripts /scripts
 COPY run-scripts.sh /tmp/run-scripts.sh

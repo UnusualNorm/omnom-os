@@ -1,10 +1,13 @@
 qemu-system-x86_64 \
+    -machine q35,vmport=off \
     -enable-kvm \
     -cpu host \
-    -smp 2 \
-    -m 4096 \
+    -smp 4 \
+    -m 8192 \
     -netdev user,id=net0 \
     -device virtio-net-pci,netdev=net0 \
+    -device virtio-vga-gl \
+    -display sdl,gl=on \
     -snapshot \
     -drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2-ovmf/x64/OVMF_CODE.4m.fd \
     -drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/x64/OVMF_VARS.4m.fd \

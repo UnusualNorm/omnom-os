@@ -1,9 +1,0 @@
-bindsym Mod4+b splith
-bindsym Mod4+v splitv
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
-bindsym Mod4+f fullscreen
-bindsym Mod4+Shift+space floating toggle
-bindsym Mod4+space focus mode_toggle
-bindsym Mod4+a focus parent
