@@ -1,5 +1,6 @@
 chrony
 fwupd
 gnome-keyring
+kanshi
 libnotify
 power-profiles-daemon
