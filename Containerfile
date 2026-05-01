@@ -22,7 +22,7 @@ RUN gpg --recv-keys F54984BFA16C640F 85AB96E6FA1BE5FE && \
     AUR_PAGER=ls aur sync --noconfirm $(cat /tmp/pkglist.aur.txt | tr '\n' ' ')
 
 
-FROM ghcr.io/unusualnorm/archlinux-bootc
+FROM ghcr.io/unusualnorm/archlinux-bootc:base
 COPY pkglists /tmp/pkglists
 COPY --from=builder /aurpkgs /usr/lib/pacman/aurpkgs
 COPY files /

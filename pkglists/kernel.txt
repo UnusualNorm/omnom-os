@@ -1,0 +1,4 @@
+linux-lts
+linux-firmware
+amd-ucode
+intel-ucode
