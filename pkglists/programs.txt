@@ -14,9 +14,11 @@ spotify
 vesktop-bin
 fuse2
 flatpak
+mission-center
 proton-ge-custom-bin
 steam
 swayimg
 prismlauncher
 pavucontrol
+virt-manager
 wayvr-bin
