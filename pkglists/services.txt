@@ -3,4 +3,5 @@ fwupd
 gnome-keyring
 kanshi
 libnotify
+plymouth
 power-profiles-daemon

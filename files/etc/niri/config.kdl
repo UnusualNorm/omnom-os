@@ -129,7 +129,7 @@ hotkey-overlay {
     skip-at-startup
 }
 input {
-    focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="10%"
     keyboard {
         xkb {
         }
@@ -183,3 +183,5 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
+
+include "local.kdl"

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Spin
+Description=Spin
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/spin
+ScriptFile=/usr/share/plymouth/themes/spin/spin.script
