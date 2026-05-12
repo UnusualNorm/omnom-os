@@ -8,6 +8,7 @@ ncdu
 ntfs-3g
 ntfsprogs
 openbsd-netcat
+rsync
 slurp
 sudo
 unzip
