@@ -17,3 +17,4 @@ wl-clipboard
 vim
 yay
 yt-dlp
+zram-generator

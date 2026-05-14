@@ -6,6 +6,7 @@ thunar-media-tags-plugin
 thunar-volman
 tumbler
 
+discord
 file-roller
 firefox
 flatpak
