@@ -20,7 +20,7 @@ pavucontrol
 prismlauncher
 proton-ge-custom-bin
 shelly-bin
-spotify
+spotify-launcher
 steam
 swayimg
 vesktop-bin

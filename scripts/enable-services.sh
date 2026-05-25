@@ -7,6 +7,5 @@ systemctl enable greetd.service
 systemctl enable libvirtd.service
 systemctl enable power-profiles-daemon.service
 systemctl enable systemd-oomd.service
-systemctl enable systemd-zram-setup@zram0.service
 systemctl enable zerotier-one.service
 systemctl --global enable syncthing.service

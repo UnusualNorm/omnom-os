@@ -1,7 +1,6 @@
 imhex-bin
 proton-ge-custom-bin
 shelly-bin
-spotify
 unityhub
 vesktop-bin
 wayvr-bin

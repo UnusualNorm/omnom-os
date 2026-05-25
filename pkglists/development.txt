@@ -12,6 +12,7 @@ dotnet-sdk
 gcc
 godot
 jdk-openjdk
+mingw-w64-gcc
 ninja
 nodejs
 python

@@ -5,5 +5,5 @@ libva-intel-driver
 intel-media-driver
 vulkan-intel
 
-nvidia-open-lts
+nvidia-open
 libva-nvidia-driver

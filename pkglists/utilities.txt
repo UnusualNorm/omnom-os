@@ -13,6 +13,8 @@ slurp
 sudo
 unzip
 usb_modeswitch
+wine
+wine-mono
 wl-clipboard
 vim
 yay
