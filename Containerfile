@@ -17,8 +17,7 @@ RUN git clone https://aur.archlinux.org/aurutils.git && \
     makepkg -si --noconfirm
 
 COPY pkglist.aur.txt /tmp/pkglist.aur.txt
-RUN gpg --recv-keys F54984BFA16C640F 85AB96E6FA1BE5FE && \
-    curl -sS https://download.spotify.com/debian/pubkey_5384CE82BA52C83A.gpg | gpg --import - && \
+RUN gpg --recv-keys 351601AD01D6378E && \
     AUR_PAGER=ls aur sync --noconfirm $(cat /tmp/pkglist.aur.txt | tr '\n' ' ')
 
 
