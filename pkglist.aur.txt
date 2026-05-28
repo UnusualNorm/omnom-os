@@ -1,4 +1,6 @@
+helium-browser-bin
 imhex-bin
+lug-helper
 proton-ge-custom-bin
 shelly-bin
 unityhub

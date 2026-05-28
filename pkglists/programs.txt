@@ -10,9 +10,12 @@ discord
 file-roller
 firefox
 flatpak
+foot
 fuse2
 gimp
+helium-browser-bin
 imhex-bin
+lug-helper
 mission-center
 mpv
 obs-studio
