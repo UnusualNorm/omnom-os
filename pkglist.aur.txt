@@ -6,4 +6,5 @@ shelly-bin
 unityhub
 vesktop-bin
 wayvr-bin
+xembedsniproxy
 yay

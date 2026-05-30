@@ -6,3 +6,4 @@ libnotify
 plymouth
 power-profiles-daemon
 syncthing
+xembedsniproxy
