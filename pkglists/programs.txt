@@ -6,6 +6,7 @@ thunar-media-tags-plugin
 thunar-volman
 tumbler
 
+brave-origin-bin
 discord
 file-roller
 firefox

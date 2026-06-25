@@ -1,3 +1,4 @@
+brave-origin-bin
 helium-browser-bin
 imhex-bin
 lug-helper

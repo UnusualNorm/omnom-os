@@ -5,5 +5,6 @@ kanshi
 libnotify
 plymouth
 power-profiles-daemon
+rtkit
 syncthing
 xembedsniproxy
