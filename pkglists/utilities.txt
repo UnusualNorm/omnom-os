@@ -9,6 +9,7 @@ ntfs-3g
 ntfsprogs
 openbsd-netcat
 rsync
+scrcpy
 slurp
 sudo
 unzip
