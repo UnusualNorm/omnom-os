@@ -19,5 +19,7 @@ python
 rust
 rust-src
 rust-wasm
+sdl3
+sdl3_mixer
 unityhub
 zed

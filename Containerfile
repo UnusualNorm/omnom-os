@@ -41,6 +41,7 @@ COPY run-scripts.sh /tmp/run-scripts.sh
 RUN /tmp/run-scripts.sh && \
     pacman -Scc --noconfirm && rm -r /var/cache/* && \
     rm -r /tmp/run-scripts.sh /scripts && \
-    bash -c 'shopt -s dotglob && rm -rf /boot/* /run/* /tmp/* /var/db/* /var/lib/* /var/log/* /var/roothome/* /var/spool/*' && \
+    find /run -mindepth 1 ! -name '.containerenv' -exec rm -rf -- {} + && \
+    bash -c 'shopt -s dotglob && rm -rf /boot/* /tmp/* /var/db/* /var/lib/* /var/log/* /var/roothome/* /var/spool/*' && \
     find "/etc" -type s -exec rm {} \; && \
     bootc container lint --fatal-warnings
