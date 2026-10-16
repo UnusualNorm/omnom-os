@@ -1,0 +1,71 @@
+length = 70;
+width = 208;
+height = 200;
+
+images = [];
+for (i = 1; i <= length; i++)
+    images[i] = Image(i + ".png");
+
+sprite = Sprite();
+sprite.SetX((Window.GetWidth() - width) / 2);
+sprite.SetY((Window.GetHeight() - height) / 2);
+
+index = 1;
+fun refresh() {
+    sprite.SetImage(images[index]);
+    index++;
+    if (index > length)
+        index = 1;
+}
+Plymouth.SetRefreshFunction(refresh);
+
+
+status_sprite = Sprite();
+fun show_status(message) {
+    status_image = Image.Text(message, 1, 1, 1);
+    status_sprite.SetImage(status_image);
+    status_sprite.SetX((Window.GetWidth() - status_image.GetWidth()) / 2);
+    status_sprite.SetY((Window.GetHeight() - height) / 2 - status_image.GetHeight());
+}
+
+fun update_status(message) { show_status(message); }
+Plymouth.SetUpdateStatusFunction(update_status);
+
+fun display_message(message) { show_status(message); }
+Plymouth.SetDisplayMessageFunction(display_message);
+
+
+prompt_sprite = null;
+entry_sprite = null;
+fun clear_prompt() {
+    prompt_sprite = null;
+    entry_sprite = null;
+}
+
+fun show_prompt(prompt, entry) {
+    clear_prompt();
+
+    prompt_image = Image.Text(prompt, 1, 1, 1);
+    prompt_sprite = Sprite(prompt_image);
+    prompt_sprite.SetX((Window.GetWidth() - prompt_image.GetWidth()) / 2);
+    prompt_sprite.SetY((Window.GetHeight() + height) / 2);
+
+    entry_image = Image.Text(entry, 1, 1, 1);
+    entry_sprite = Sprite(entry_image);
+    entry_sprite.SetX((Window.GetWidth() - entry_image.GetWidth()) / 2);
+    entry_sprite.SetY((Window.GetHeight() + height) / 2 + prompt_image.GetHeight());
+}
+
+fun display_password(prompt, bullet_count) {
+    bullets = "";
+    for (i = 0; i < bullet_count; i++)
+        bullets += "*";
+    show_prompt(prompt, bullets);
+}
+Plymouth.SetDisplayPasswordFunction(display_password);
+
+fun display_question(prompt, entry) { show_prompt(prompt, entry); }
+Plymouth.SetDisplayQuestionFunction(display_question);
+
+fun display_normal() { clear_prompt(); }
+Plymouth.SetDisplayNormalFunction(display_normal);

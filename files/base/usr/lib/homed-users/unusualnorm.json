@@ -1,0 +1,15 @@
+{
+  "gid": 1000,
+  "homeDirectory": "/var/home/unusualnorm",
+  "memberOf": ["wheel"],
+  "privileged": {
+    "sshAuthorizedKeys": [
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCjVm5A69pNUHmMbtxzxtrWrT/O3GiW3EGWJhbkYJr+prJjhLwwCUhEnKIib9Q8m/faAy9dnyWTkezE2IJjVYbgQSmUpDWbfkJdXevYuf9hoOhBokbJptPdnvuffFrqxu9Yst7/tifxGZMQNyyxXYjx1l9BQm9Guak92ppWpiLQ2J1IIRizq9oDml0MRclt8zbD3DdnJ1dcXbiUUK4i/jskaZYVQff2ov3/qeMyFL/oTQZg7B+G7/+iei9YKQU7D3C3HxvoTui4Pa7kIf6s4fSC/DaC+BU4/w955K8P4HaHI1K7F8r3L+Vld83ZRwpHEhqekEaCGUovqsE4f6S7ut9P"
+    ]
+  },
+  "realName": "Unusual Norm",
+  "shell": "/usr/bin/zsh",
+  "storage": "directory",
+  "uid": 1000,
+  "userName": "unusualnorm"
+}

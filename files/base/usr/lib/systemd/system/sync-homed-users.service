@@ -1,0 +1,12 @@
+[Unit]
+Description=Synchronize systemd-homed users
+Requires=systemd-homed.service
+After=systemd-homed.service
+Before=systemd-user-sessions.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/sync-homed-users
+
+[Install]
+WantedBy=multi-user.target

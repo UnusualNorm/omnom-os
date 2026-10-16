@@ -1,0 +1,2 @@
+proton-ge-custom-bin
+bibata-cursor-theme-bin

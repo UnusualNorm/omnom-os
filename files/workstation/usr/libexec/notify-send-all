@@ -1,0 +1,12 @@
+shopt -s nullglob
+for bus in /run/user/[0-9]*/bus; do
+    uid="${bus#/run/user/}"
+    uid="${uid%/bus}"
+    ent="$(getent passwd "$uid")"
+    [[ -n "$ent" ]] || continue
+    user="${ent%%:*}"
+    runuser -u "$user" -- env \
+        XDG_RUNTIME_DIR="/run/user/$uid" \
+        DBUS_SESSION_BUS_ADDRESS="unix:path=$bus" \
+        notify-send "$@"
+done

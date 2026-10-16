@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+for file in /usr/lib/homed-users/*.json; do
+    user=$(basename "$file" .json)
+    if homectl inspect "$user" >/dev/null 2>&1; then
+        homectl update --identity="$file" "$user"
+    else
+        homectl create --identity="$file" "$user"
+    fi
+done
