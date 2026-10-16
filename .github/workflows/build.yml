@@ -19,14 +19,14 @@ jobs:
     steps:
       - uses: ublue-os/remove-unwanted-software@v9
       - uses: actions/checkout@v7
-      - run: sudo podman build \
-          --build-arg "MODULES=${{ matrix.modules }}" \
-          --cap-add sys_admin \
-          --squash-all \
-          --tag "ghcr.io/unusualnorm/omnom-os:${{ matrix.tag }}" \
+      - run: sudo podman build
+          --build-arg "MODULES=${{ matrix.modules }}"
+          --cap-add sys_admin
+          --squash-all
+          --tag "ghcr.io/unusualnorm/omnom-os:${{ matrix.tag }}"
           .
-      - run: sudo podman login \
-          --username "${{ github.actor }}" \
-          --password "${{ github.token }}" \
+      - run: sudo podman login
+          --username "${{ github.actor }}"
+          --password "${{ github.token }}"
           "ghcr.io/unusualnorm"
       - run: sudo podman push "ghcr.io/unusualnorm/omnom-os:${{ matrix.tag }}"
