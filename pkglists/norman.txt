@@ -1,0 +1,5 @@
+lib32-nvidia-utils
+lib32-vulkan-icd-loader
+libva-nvidia-driver
+nvidia-open
+nvidia-utils

@@ -1,2 +1,4 @@
-proton-ge-custom-bin
 bibata-cursor-theme-bin
+imhex-bin
+proton-ge-custom-bin
+vesktop-bin

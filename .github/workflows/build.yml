@@ -10,6 +10,8 @@ jobs:
     strategy:
       matrix:
         include:
+          - tag: norman
+            modules: base workstation norman
           - tag: normette
             modules: base workstation normette
     permissions:
@@ -29,4 +31,6 @@ jobs:
           --username "${{ github.actor }}"
           --password "${{ github.token }}"
           "ghcr.io/unusualnorm"
-      - run: sudo podman push "ghcr.io/unusualnorm/omnom-os:${{ matrix.tag }}"
+      - run: sudo podman push
+          --compression-format=zstd
+          "ghcr.io/unusualnorm/omnom-os:${{ matrix.tag }}"
