@@ -1,16 +1,22 @@
 bibata-cursor-theme-bin
 bitwarden
+blender
 brave-origin-bin
 brightnessctl
 fastfetch
+ffmpeg
 foot
 fuzzel
+gimp
 gnome-keyring
 greetd
 greetd-tuigreet
 helvum
+imagemagick
+kdenlive
 libnotify
 mako
+mpv
 nautilus
 niri
 noto-fonts
@@ -42,3 +48,4 @@ wireplumber
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 xwayland-satellite
+zed
