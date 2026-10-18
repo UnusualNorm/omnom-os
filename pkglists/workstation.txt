@@ -1,3 +1,4 @@
+audacity
 bibata-cursor-theme-bin
 bitwarden
 blender
@@ -9,13 +10,16 @@ foot
 fuzzel
 gimp
 gnome-keyring
+gparted
 greetd
 greetd-tuigreet
+helvum
 helvum
 imagemagick
 kdenlive
 libnotify
 mako
+mission-center
 mpv
 nautilus
 niri
@@ -34,7 +38,8 @@ pipewire-jack
 pipewire-pulse
 playerctl
 plymouth
-polkit
+polkit-gnome
+prismlauncher
 proton-ge-custom-bin
 qdirstat
 quickshell
@@ -47,5 +52,7 @@ vesktop-bin
 wireplumber
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
+xembedsniproxy
+xorg-xhost
 xwayland-satellite
 zed

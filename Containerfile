@@ -58,6 +58,6 @@ RUN \
     # var-log
     rm -rf /var/log/* && \
     # var-tmpfiles
-    rm -rf /var/cache/* /var/db/* /var/lib/* /var/spool/* && \
+    rm -rf /var/cache/* /var/db/* /var/lib/* /var/roothome/* /var/roothome/.* /var/spool/* && \
     bootc container lint --no-truncate --fatal-warnings
 LABEL containers.bootc=1
