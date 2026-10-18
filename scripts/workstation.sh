@@ -1,6 +1,7 @@
 set -e
 
 systemctl enable greetd.service
+systemctl enable power-profiles-daemon.service
 
 systemctl --global enable pipewire.service
 systemctl --global enable pipewire-pulse.service
