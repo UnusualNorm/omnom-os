@@ -39,6 +39,7 @@ pipewire-pulse
 playerctl
 plymouth
 polkit-gnome
+power-profiles-daemon
 prismlauncher
 proton-ge-custom-bin
 qdirstat
