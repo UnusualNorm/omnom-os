@@ -1,0 +1,1 @@
+LABEL=data /mnt ext4 nofail 0 2

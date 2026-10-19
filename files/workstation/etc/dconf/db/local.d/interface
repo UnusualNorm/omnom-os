@@ -1,4 +1,5 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
+cursor-theme='Bibata-Modern-Classic'
 gtk-theme='Adwaita-dark'
 icon-theme='Papirus-Dark'
