@@ -8,6 +8,7 @@ systemctl --global enable pipewire-pulse.service
 systemctl --global enable wireplumber.service
 
 systemctl --global add-wants niri.service foot-server.service
+systemctl --global add-wants niri.service kanshi.service
 systemctl --global add-wants niri.service mako.service
 systemctl --global add-wants niri.service polkit-gnome.service
 systemctl --global add-wants niri.service quickshell.service

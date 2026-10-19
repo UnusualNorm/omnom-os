@@ -16,6 +16,7 @@ greetd-tuigreet
 helvum
 helvum
 imagemagick
+kanshi
 kdenlive
 libnotify
 mako
