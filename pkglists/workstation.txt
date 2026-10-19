@@ -51,6 +51,7 @@ steam
 swaybg
 swaylock
 vesktop-bin
+wayvr-bin
 wireplumber
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
