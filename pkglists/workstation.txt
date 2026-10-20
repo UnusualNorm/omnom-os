@@ -14,7 +14,6 @@ gparted
 greetd
 greetd-tuigreet
 helvum
-helvum
 imagemagick
 kanshi
 kdenlive
@@ -39,6 +38,7 @@ pipewire-jack
 pipewire-pulse
 playerctl
 plymouth
+polkit
 polkit-gnome
 power-profiles-daemon
 prismlauncher
@@ -59,3 +59,4 @@ xembedsniproxy
 xorg-xhost
 xwayland-satellite
 zed
+zerotier-one
