@@ -4,3 +4,4 @@ proton-ge-custom-bin
 vesktop-bin
 wayvr-bin
 xembedsniproxy
+yay-bin

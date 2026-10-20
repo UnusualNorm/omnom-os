@@ -58,5 +58,6 @@ xdg-desktop-portal-gtk
 xembedsniproxy
 xorg-xhost
 xwayland-satellite
+yay-bin
 zed
 zerotier-one
