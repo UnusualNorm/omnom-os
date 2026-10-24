@@ -15,6 +15,7 @@ greetd
 greetd-tuigreet
 helvum
 imagemagick
+imhex-bin
 kanshi
 kdenlive
 libnotify

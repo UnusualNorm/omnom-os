@@ -3,6 +3,7 @@ set -e
 mv /var/lib/pacman /usr/lib/pacman
 echo "uninitialized" > /etc/machine-id
 
+systemctl enable bootc-upgrade.timer
 systemctl enable iwd.service
 systemctl enable sshd.service
 systemctl enable sync-homed-users.service
